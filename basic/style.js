@@ -1,8 +1,3 @@
-var console = {
-	log: function(s) {
-		document.getElementById('debug').innerText += s+'\n';
-	}
-};
 let styleTypes = {
 	noun: {
 		mainColor: "#2497E6", //blue
@@ -18,9 +13,9 @@ let styleTypes = {
 	}
 }
 
-console.log(styleTypes.noun.mainColor);
+//console.log(styleTypes.noun.mainColor);
 function styleCard(type) {
-	console.log(type);
+	//console.log(type);
 	let style = styleTypes[type];
 	let root = document.querySelector(':root');
 	root.style.setProperty("--main-color",style.mainColor);
@@ -30,7 +25,7 @@ function wordType() {
 	var typeField = document.querySelector(".wordtype").innerHTML;
 	var regex = /\(([^)]+)\)/;
 	var type = regex.exec(typeField)[1];
-	console.log(type);
+	//console.log(type);
 	return type;
 }
 
