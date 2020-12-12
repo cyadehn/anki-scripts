@@ -13,7 +13,7 @@ let styleTypes = {
 	}
 }
 
-//console.log(styleTypes.noun.mainColor);
+console.log(styleTypes.noun.mainColor);
 function styleCard(type) {
 	//console.log(type);
 	let style = styleTypes[type];
@@ -22,7 +22,8 @@ function styleCard(type) {
 	root.style.setProperty("--dark-color", style.darkColor);
 }
 function wordType() {
-	var typeField = document.querySelector(".wordtype").innerHTML;
+	var typeField = document.querySelector(".wordtypeJS").innerHTML;
+	console.log(typeField);
 	var regex = /\(([^)]+)\)/;
 	var type = regex.exec(typeField)[1];
 	//console.log(type);

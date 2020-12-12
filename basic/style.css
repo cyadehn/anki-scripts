@@ -1,0 +1,215 @@
+:root {
+  --main-blue: #2497E6;
+	--main-grey: #555555;
+	--main-red: ;
+	--main-yellow: ;
+	--dark-blue: #016ea6;
+	--dark-red: ;
+	--dark-yellow: ;
+	
+	--main-color: ;
+	--dark-color: ;
+}
+
+
+u {
+ text-decoration-style: wavy;
+text-underline-position: under;
+ color: white;
+ padding: 1px;
+}
+
+.card {
+ font-family: UD Digi Kyokasho N-R;
+ font-size: 20px;
+ text-align: center;
+ background: url("_bkgd.jpg");
+ background-size: cover;
+ padding: 10px;
+}
+
+.frontbg {
+ background-color: var(--main-color);
+ font-size: 50px;
+ border-radius: 7px;
+ color: white;
+ position: relative;
+ left: 0;
+}
+
+.hira {
+ font-size: 25px;
+ line-height: 5px;
+ padding-bottom: 40px;
+}
+
+.soundFront {
+ position: absolute;
+ top: 40px;
+ right: 40px;
+ font-size: 18px;
+ content: url("play.png");
+ width: 6%;
+}
+
+.backbg {
+ position: relative;
+ top: -3px;
+ background-color: white;
+ padding: 15px;
+ padding-bottom: 15px;
+ padding-left: 30px;
+ padding-right: 30px;
+ border-radius: 0px 0px 10px 10px; 
+ font-size: 28px;
+ text-align: left;
+}
+
+.backmain {
+	margin: 15px;
+	color: var(--dark-color);
+}
+
+.definition {
+	font-style: italic;
+	font-size: 30px;
+}
+
+.wordtype {
+ font-family: Raleway;
+ font-style: italic;
+ padding: 15px;
+ font-weight: bold;
+ width: fit-content;
+
+ font-size: 15px;
+
+ padding: 5px;
+ padding-left: 7px;
+}
+
+.sentence {
+ font-size: 25px;
+ color: var(--main-color);
+ margin-top: -20px;
+ margin-bottom: 5px;
+}
+
+.others {
+ position: relative;
+ top: 15px;
+ border: 3px solid var(--dark-color);
+ border-radius: 7px;
+ color: var(--main-color);
+ font-size: 20px;
+ width: auto;
+ padding: 15px 20px;
+ margin-bottom: 35px;
+
+}
+
+.reference {
+	background-color: var(--main-color);
+	/*border: 3px solid #2497E6;*/
+	border-radius: 30px;
+	text-align: right;
+	display: flex;
+	padding: 3px;
+	justify-content: space-evenly;
+	max-width: 250px;
+	margin-left: auto;
+}
+
+.level {
+ color: var(--main-grey);
+ font-size: 15px;
+border-radius: 30px;
+padding: 3px;
+	width: fit-content;
+	background: white;
+}
+
+.notes {
+
+}
+
+#debug {
+  background-color: white;
+  height: 20em;
+  font-family: monospace;
+  color: black;
+  text-align: left;
+  font-size:10pt;
+}
+
+
+
+
+
+
+
+
+
+hr {
+ height: 2px;
+ font-size: 30px;
+ border: 0;
+ background: #72c8e1;
+}
+
+
+ruby rt { 
+ visibility: hidden; 
+} 
+
+ruby:hover rt { 
+ visibility: visible; 
+}
+
+.hidden {visibility: hidden; font-size: 0;} 
+
+.hidden .cloze, .cloze .hidden {
+	visibility: visible; 
+	background-color: white;
+	font-size: 0.8rem;
+} 
+
+@-moz-document url-prefix() {
+	ruby {
+		position: relative;display: inline-block;
+	} 
+	ruby rt {
+		position: absolute;
+		display: block;
+		font-size: 0.5em;
+		left: -50%;
+		bottom: 115%;
+		width: 210%;
+		padding: 0;
+		text-align: center;
+		line-height:1em
+	}
+} 
+
+.hidden .basemaru {position:relative;} 
+.hidden .basemaru:after {
+	content: "◯"; 
+	visibility: visible; 
+	position:absolute; 
+	left:0;
+} 
+
+.hidden .cloze .basemaru:after, 
+.cloze .hidden .basemaru:after {
+	visibility: hidden;
+} 
+
+div {
+	line-height: 2em;
+} 
+
+.cloze_container .hidden {
+	visibility: visible; 
+	background-color: white;
+}
+
