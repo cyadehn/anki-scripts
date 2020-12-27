@@ -27,6 +27,10 @@ function wordType() {
 	var regex = /\(([^)]+)\)/;
 	var type = regex.exec(typeField)[1];
 	//console.log(type);
+	if (type = "Word Type")
+	{
+		return "noun";
+	}
 	return type;
 }
 
