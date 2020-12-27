@@ -1,0 +1,185 @@
+:root {
+	--main-grey: #555555;
+	--main-color: ;
+	--dark-color: ;
+	--default-font-size: 20px;
+	--front-size: 50px;
+	--hira-size: 25px;
+	--definition-size: 30px;
+	--others-size: 15px;
+}
+
+div {
+	line-height: 2em;
+} 
+
+
+hr {
+ height: 2px;
+ font-size: 30px;
+ border: 0;
+ background: #72c8e1;
+}
+
+
+u {
+ text-decoration-style: wavy;
+text-underline-position: under;
+ color: white;
+ padding: 1px;
+}
+
+.card {
+ font-family: UDDigiKyokasho;
+ font-size: 20px;
+ text-align: center;
+ background: url("_bkgd.jpg");
+ background-size: cover;
+ padding: 10px;
+}
+
+.frontbg {
+	position: relative;
+	left: 0;
+ background-color: var(--main-color);
+ font-size: var(--front-size);
+ border-radius: 7px;
+ color: white;
+}
+
+.hira {
+ font-size: var(--hira-size);
+ line-height: 5px;
+ padding-bottom: 40px;
+}
+
+.soundFront {
+ font-size: 18px;
+ content: url("play.png");
+ width: 6%;
+}
+
+.backbg {
+	position: relative;
+	top: -7px;
+ background-color: white;
+ padding: 15px;
+ padding-bottom: 15px;
+ padding-left: 30px;
+ padding-right: 30px;
+ border-radius: 0px 0px 10px 10px; 
+ font-size: 28px;
+ text-align: left;
+}
+
+.backmain {
+	margin: 5px;
+	margin-bottom: 40px;
+	color: var(--dark-color);
+	line-height: 35px;
+}
+
+.definition {
+	font-style: italic;
+	font-size: var(--definition-size);
+}
+
+.wordtype {
+ font-family: RalewayBoldItalic;
+ padding: 15px;
+ width: fit-content;
+ font-size: 15px;
+ padding-left: 7px;
+}
+
+.sentence {
+	position: relative;
+	left: 0;
+ font-size: var(--others-size);
+ color: var(--main-color);
+ margin-top: -20px;
+ margin-bottom: 5px;
+ border: 3px solid var(--dark-color);
+ border-radius: 7px 7px 0 0;
+ width: auto;
+ padding: 15px 20px;
+}
+
+.others {
+ position: relative;
+ top: -8px;
+ border: 3px solid var(--dark-color);
+ border-radius: 0 0 7px 7px;
+ color: var(--main-color);
+ font-size: var(--others-size);
+ width: auto;
+ padding: 15px 20px;
+ margin-bottom: 35px;
+
+}
+
+.reference {
+	background-color: var(--main-color);
+	/*border: 3px solid #2497E6;*/
+	border-radius: 30px;
+	text-align: right;
+	display: flex;
+	padding: 3px;
+	justify-content: space-evenly;
+	max-width: 250px;
+	margin-left: auto;
+}
+
+.level {
+ color: var(--main-grey);
+ font-size: 15px;
+border-radius: 30px;
+padding: 3px;
+	width: fit-content;
+	background: white;
+}
+
+#debug {
+  background-color: white;
+  height: 20em;
+  font-family: monospace;
+  color: black;
+  text-align: left;
+  font-size:10pt;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px){
+	:root {
+		--front-size: 30px;
+		--default-font-size: 10px;
+		--hira-size: 20px;
+		--definition-size: 25px;
+		--others-size: 15px;
+	}
+
+	.others, .sentence {
+		padding: 10px;
+	}
+
+	.others {
+		margin-bottom: 10px;
+	}
+}
+
+@font-face {
+ font-family: RalewayBoldItalic;
+ src: url("_Raleway-BoldItalic.ttf");
+}
+
+@font-face {
+ font-family: UDDigiKyokasho;
+ src: url("_UDDigiKyokashoN.ttf");
+}
