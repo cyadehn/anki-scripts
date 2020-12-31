@@ -1,5 +1,7 @@
-<div class=frontbg>
-
+<div class=frontbg onclick=main()>
+<script>
+document.querySelector(".frontbg").click();
+</script>
 	{{Word}}
 
 	<div class=hira>
@@ -74,10 +76,6 @@ function wordType() {
 	var regex = /\(([^)]+)\)/;
 	var type = regex.exec(typeField)[1];
 	//console.log(type);
-	if (type = "Word Type")
-	{
-		return "noun";
-	}
 	return type;
 }
 
@@ -87,6 +85,14 @@ function main() {
 	}
 }
 
+function refresh() {
+let typespan = document.querySelector(".wordtype");
+let type = typespan.innerText;
+typespan.innerText = type;
+}
+
+window.setInterval(refresh(), 500);
 window.addEventListener("onchange", main());
+window.addEventListener("onclick", main());
 
 </script>

@@ -1,6 +1,10 @@
-<div class=frontbg>
+<div class=frontbg onclick=main()>
 		{{Definition}}
 </div>
+
+<script>
+document.querySelector(".frontbg").click();
+</script>
 
 
 <!-- word type hidden, but tagged separately for Js access -->
@@ -58,6 +62,13 @@ function main() {
 	}
 }
 
-window.addEventListener("onchange", main());
+function refresh() {
+let typespan = document.querySelector(".wordtype");
+let type = typespan.innerText;
+typespan.innerText = type;
+}
 
+window.setInterval(refresh(), 500);
+window.addEventListener("onchange", main());
+window.addEventListener("onclick", main());
 </script>

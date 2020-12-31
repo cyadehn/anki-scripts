@@ -1,8 +1,11 @@
-<div class=frontbg>
+<div class=frontbg onclick=main()>
+<script>
+document.querySelector(".frontbg").click();
+</script>
 
 	{{Definition}}
 
-	<div class="hira wordtypeJS">
+	<div class="hira">
 		{{Word Type}}
 	</div>
 	
@@ -35,7 +38,7 @@
 <script>try{try{document.querySelector(".replaybutton").innerHTML="\ud83d\udd0a"}catch{document.querySelector(".replay-button").innerHTML="\ud83d\udd0a"}}catch{}</script>
 
 <!-- word type hidden, but tagged separately for Js access -->
-<span class=wordtype style="display: none;">({{Word Type}})</span>
+<span class=wordtypeJS style="display: none;">({{Word Type}})</span>
 
 
 
@@ -67,7 +70,7 @@ function styleCard(type) {
 	root.style.setProperty("--dark-color", style.darkColor);
 }
 function wordType() {
-	var typeField = document.querySelector(".wordtype").innerHTML;
+	var typeField = document.querySelector(".wordtypeJS").innerHTML;
 	//console.log(typeField);
 	var regex = /\(([^)]+)\)/;
 	var type = regex.exec(typeField)[1];
@@ -81,6 +84,14 @@ function main() {
 	}
 }
 
+function refresh() {
+let typespan = document.querySelector(".wordtype");
+let type = typespan.innerText;
+typespan.innerText = type;
+}
+
+window.setInterval(refresh(), 500);
 window.addEventListener("onchange", main());
+window.addEventListener("onclick", main());
 
 </script>
