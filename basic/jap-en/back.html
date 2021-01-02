@@ -1,98 +1,83 @@
 <div class=frontbg onclick=main()>
-<script>
-document.querySelector(".frontbg").click();
-</script>
+	<script>
+		document.querySelector(".frontbg").click();
+	</script>
 	{{Word}}
-
 	<div class=hira>
 		{{Reading}}<span class=audio>{{BackSound}}</span>
 	</div>
-	
 </div>
-
-
-
 <div class=backbg>
-
 	<div class=backmain>
 		<span class=definition>{{Definition}}, {{Alternate Definition}}</span><br>
 		<span class=wordtype>({{Word Type}})</span>
 	</div>
-
 	<div class=sentence>
 		{{Sentence(s)}}
 	</div>
-
 	<div class=others>
 			<div class=notes>{{Note(s)}}</div>
 	</div>
-
 	<div class=reference>
 		<div class=level>Ref: {{Textbook/Level}}</div>
 		<div class=level>Chapter: {{Ch#}}</div>
 	</div>
-
 </div>
 
-<script>try{try{document.querySelector(".replaybutton").innerHTML="\ud83d\udd0a"}catch{document.querySelector(".replay-button").innerHTML="\ud83d\udd0a"}}catch{}</script>
-
+<!--JavaScript has to be kept in card to work on both desktop and iOS-->
+<!-- replace audio button with custom icon -->
+<script>
+	try {
+		try {
+			document.querySelector(".replaybutton").innerHTML="\ud83d\udd0a";
+		}
+		catch{
+			document.querySelector(".replay-button").innerHTML="\ud83d\udd0a";
+		}
+	}
+	catch {}
+</script>
 <!-- word type hidden, but tagged separately for Js access -->
-<span class=wordtype style="display: none;">({{Word Type}})</span>
-
+<span class=wordtypeJS style="display: none;">({{Word Type}})</span>
 <script type="text/javascript" src="scripts/basic/_style.js"></script>
 
-<!--
-<div id="debug"/>
-<script type="text/javascript" src="scripts/_console.js"></script>
+<!-- JS Debug Div for Console.Log
+	<div id="debug"/>
+	<script type="text/javascript" src="scripts/_console.js"></script>
 -->
 
 <script>
-let styleTypes = {
-	noun: {
-		mainColor: "#2497E6", //blue
-		darkColor: "#016ea6"  //dark blue
-	},
-	verb: {
-		mainColor: "#FA2445",  //red
-		darkColor: "#B82E3F"  //dark red
-	},
-	adjective: {
-		mainColor: "#C9C08F",  //yellow
-		darkColor: "#ACA57C"  //dark yellow
+	let styleTypes = {
+		noun: {
+			mainColor: "#2497E6", //blue
+			darkColor: "#016ea6"  //dark blue
+		},
+		verb: {
+			mainColor: "#FA2445",  //red
+			darkColor: "#B82E3F"  //dark red
+		},
+		adjective: {
+			mainColor: "#C9C08F",  //yellow
+			darkColor: "#ACA57C"  //dark yellow
+		}
 	}
-}
-
-//console.log(styleTypes.noun.mainColor);
-function styleCard(type) {
-	//console.log(type);
-	let style = styleTypes[type];
-	let root = document.querySelector(':root');
-	root.style.setProperty("--main-color",style.mainColor);
-	root.style.setProperty("--dark-color", style.darkColor);
-}
-function wordType() {
-	var typeField = document.querySelector(".wordtype").innerHTML;
-	console.log(typeField);
-	var regex = /\(([^)]+)\)/;
-	var type = regex.exec(typeField)[1];
-	//console.log(type);
-	return type;
-}
-
-function main() {
-	if ( ["noun", "verb", "adjective"].indexOf(wordType()) >= 0 ) {
-		styleCard(wordType());
+	function styleCard(type) {
+		let style = styleTypes[type];
+		let root = document.querySelector(':root');
+		root.style.setProperty("--main-color",style.mainColor);
+		root.style.setProperty("--dark-color", style.darkColor);
 	}
-}
-
-function refresh() {
-let typespan = document.querySelector(".wordtype");
-let type = typespan.innerText;
-typespan.innerText = type;
-}
-
-window.setInterval(refresh(), 500);
-window.addEventListener("onchange", main());
-window.addEventListener("onclick", main());
-
+	function wordType() {
+		var typeField = document.querySelector(".wordtypeJS").innerHTML;
+		var regex = /\(([^)]+)\)/;
+		var type = regex.exec(typeField)[1];
+		return type;
+	}
+	function main() {
+		if ( ["noun", "verb", "adjective"].indexOf(wordType()) >= 0 ) {
+			styleCard(wordType());
+		}
+	}
+	window.addEventListener("onchange", main());
+	window.addEventListener("onclick", main());
 </script>
