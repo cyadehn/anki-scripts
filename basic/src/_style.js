@@ -11,6 +11,22 @@ const styleTypes = {
 	adjective: {
 		mainColor: "#FEE071", // yellow
 		darkColor: "#ACA57C" // dark yellow
+	},
+	particle: {
+		mainColor: "#A700ED",  // purple
+		darkColor: "#6E009D"  // dark purple
+	},
+	counter: {
+		mainColor: "#A700ED",  // purple
+		darkColor: "#6E009D"  // dark purple
+	},
+	expression: {
+		mainColor: "#444444", // dark grey
+		darkColor: "#000000" // black
+	},
+	adverb: {
+		mainColor: "#444444", // dark grey
+		darkColor: "#000000" // black
 	}
 };
 function styleCard(type) {
