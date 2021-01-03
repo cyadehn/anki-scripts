@@ -8,7 +8,7 @@ let styleTypes = {
 		darkColor: "#B82E3F"  //dark red
 	},
 	adjective: {
-		mainColor: "#C9C08F",  //yellow
+		mainColor: "#FEE071",  //yellow
 		darkColor: "#ACA57C"  //dark yellow
 	}
 }
