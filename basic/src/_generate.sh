@@ -8,7 +8,7 @@ echo "</script>" > temp2.txt
 for f in en-jap/* jap-en/*;
 do
     # set output name to output dir + filename, and create the file / clear contents
-    output="output/$f"
+    output="../output/$f"
     mkdir -p $(dirname $output)
     touch $output
     > $output
