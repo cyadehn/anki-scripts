@@ -62,9 +62,9 @@ function getWordType()
 	return "";
 }
 const altDiv = document.querySelector(".altDefJS");
-const defDiv = document.querySelector(".definition");
+const defDiv = document.querySelector(".backDef");
 function getAltDef() { return altDiv.innerHTML; }
-function appendAltDefs(altDefs) { if (defDiv) defDiv.innerHTML += (", " + altDefs); }
+function appendAltDefs(altDefs) { if (defDiv) defDiv.innerHTML += ("Alt: " + altDefs); }
 function main() 
 {
 	var type = getWordType();
@@ -72,5 +72,4 @@ function main()
 	if (type) styleCard(type);
 	if (altDefinitions) appendAltDefs(altDefinitions);
 }
-window.addEventListener("onchange", main());
 window.addEventListener("onclick", main());
