@@ -59,7 +59,7 @@ text-underline-position: under;
  width: 6%;
 }
 
-.cardBottom {
+.cardBack {
 	position: relative;
 	top: -7px;
  background-color: white;
@@ -72,19 +72,19 @@ text-underline-position: under;
  text-align: left;
 }
 
-.bottomMain {
+.backMain {
 	margin: 5px;
 	margin-bottom: 40px;
 	color: var(--dark-color);
 	line-height: 35px;
 }
 
-.definition {
+.backTerm {
 	font-style: italic;
 	font-size: var(--definition-size);
 }
 
-.wordtype {
+.backInfo {
  font-family: RalewayBoldItalic;
  padding: 15px;
  width: fit-content;
