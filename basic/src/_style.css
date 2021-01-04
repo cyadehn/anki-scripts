@@ -59,7 +59,7 @@ text-underline-position: under;
  width: 6%;
 }
 
-.backbg {
+.cardBottom {
 	position: relative;
 	top: -7px;
  background-color: white;
@@ -72,7 +72,7 @@ text-underline-position: under;
  text-align: left;
 }
 
-.backmain {
+.bottomMain {
 	margin: 5px;
 	margin-bottom: 40px;
 	color: var(--dark-color);
