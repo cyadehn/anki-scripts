@@ -57,11 +57,16 @@ function wordType() {
 	}
 	return "";
 }
-function main() {
-	var type = wordType();
-	if (type) {
-		styleCard(type);
-	}
+const altDiv = document.querySelector(".altDefJS");
+const defDiv = document.querySelector(".definition");
+function getAltDef() { return altDiv.innerHTML; }
+function appendAltDefs(altDefs) { if (defDiv) defDiv.innerHTML += (", " + altDefs); }
+function main() 
+{
+	var type = getWordType();
+	var altDefinitions = getAltDef();
+	if (type) styleCard(type);
+	if (altDefinitions) appendAltDefs(altDefinitions);
 }
 window.addEventListener("onchange", main());
 window.addEventListener("onclick", main());
