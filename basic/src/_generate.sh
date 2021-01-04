@@ -14,7 +14,7 @@ do
     > $output
 
     # concatenate file, style tags, and style script; remove temp files
-    cat $f temp1.txt _style.js temp2.txt >> $output
+    cat $f _jsRef.html temp1.txt _style.js temp2.txt >> $output
 done
 rm temp1.txt
 rm temp2.txt
