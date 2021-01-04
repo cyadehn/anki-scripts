@@ -1,4 +1,3 @@
-console.log("Starting");
 const itemTypes = ["noun", "verb", "adjective", "particle", "counter", "numeric", "expression", "adverb"];
 const styleTypes = 
 {
@@ -75,4 +74,3 @@ function main()
 }
 window.addEventListener("onchange", main());
 window.addEventListener("onclick", main());
-console.log("Finished.");
