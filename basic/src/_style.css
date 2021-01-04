@@ -38,7 +38,7 @@ text-underline-position: under;
  padding: 10px;
 }
 
-.frontbg {
+.cardTop {
 	position: relative;
 	left: 0;
  background-color: var(--main-color);
