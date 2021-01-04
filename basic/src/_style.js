@@ -34,19 +34,23 @@ const styleTypes =
 		darkColor: "#000000" // black
 	}
 };
-function styleCard(type) {
+const root = document.querySelector(":root");
+const typeField = document.querySelector(".wordtypeJS").innerHTML;
+function styleCard(type) 
+{
 	const style = styleTypes[type];
-	const root = document.querySelector(":root");
 	root.style.setProperty("--main-color", style.mainColor);
 	root.style.setProperty("--dark-color", style.darkColor);
 }
-function wordType() {
-	const typeField = document.querySelector(".wordtypeJS").innerHTML;
+function getWordType() 
+{
 	const regex = /\(([^)]+)\)/;
 	const type = regex.exec(typeField)[1];
-	if (itemTypes.indexOf(type) >= 0) {
+	if (itemTypes.indexOf(type) >= 0) 
+	{
 		return type;
-	} else {
+	} else 
+	{
 		for (let i = 0; i<itemTypes.length; i++)
 		{
 			if (type.includes(itemTypes[i]))
