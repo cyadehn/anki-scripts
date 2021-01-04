@@ -34,16 +34,16 @@ const styleTypes =
 		darkColor: "#000000" // black
 	}
 };
-const root = document.querySelector(":root");
-const typeField = document.querySelector(".wordtypeJS").innerHTML;
 function styleCard(type) 
 {
+	const root = document.querySelector(":root");
 	const style = styleTypes[type];
 	root.style.setProperty("--main-color", style.mainColor);
 	root.style.setProperty("--dark-color", style.darkColor);
 }
 function getWordType() 
 {
+	const typeField = document.querySelector(".wordtypeJS").innerHTML;
 	const regex = /\(([^)]+)\)/;
 	const type = regex.exec(typeField)[1];
 	if (itemTypes.indexOf(type) >= 0) 
@@ -61,10 +61,16 @@ function getWordType()
 	}
 	return "";
 }
-const altDiv = document.querySelector(".altDefJS");
-const defDiv = document.querySelector(".backDef");
-function getAltDef() { return altDiv.innerHTML; }
-function appendAltDefs(altDefs) { if (defDiv) defDiv.innerHTML += ("Alt: " + altDefs); }
+function getAltDef() 
+{
+	const altDiv = document.querySelector(".altDefJS");
+	return altDiv.innerHTML; 
+}
+function appendAltDefs(altDefs) 
+{ 
+	const defDiv = document.querySelector(".backDef");
+	if (defDiv) defDiv.innerHTML += ("Alt: " + altDefs); 
+}
 function main() 
 {
 	var type = getWordType();
