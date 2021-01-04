@@ -1,5 +1,6 @@
-const itemTypes = ["noun", "verb", "adjective", "particle", "counter", "expression", "adverb"];
-const styleTypes = {
+const itemTypes = ["noun", "verb", "adjective", "particle", "counter", "numeric", "expression", "adverb"];
+const styleTypes = 
+{
 	noun: {
 		mainColor: "#2497E6", // blue
 		darkColor: "#016ea6" // dark blue
@@ -17,6 +18,10 @@ const styleTypes = {
 		darkColor: "#6E009D"  // dark purple
 	},
 	counter: {
+		mainColor: "#A700ED",  // purple
+		darkColor: "#6E009D"  // dark purple
+	},
+	numeric: {
 		mainColor: "#A700ED",  // purple
 		darkColor: "#6E009D"  // dark purple
 	},
