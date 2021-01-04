@@ -78,5 +78,3 @@ function main()
 	if (type) styleCard(type);
 	if (altDefinitions) appendAltDefs(altDefinitions);
 }
-window.addEventListener("onchange", main());
-window.addEventListener("onclick", main());

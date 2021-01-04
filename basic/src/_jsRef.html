@@ -1,26 +1,3 @@
 <!-- reference divs hidden, but tagged separately for JS access -->
 <span class=wordtypeJS style="display: none;">({{Word Type}})</span>
 <span class=altDefJS style="display: none;">{{Alternate Definitions}}</span>
-
-<!--JavaScript has to be kept in card to work on both desktop and iOS-->
-<script type="text/javascript" src="scripts/basic/_style.js"></script>
-<script>document.querySelector(".cardTop").click();</script>
-
-<!-- replace audio button with custom icon -->
-<script>
-	try {
-		try {
-			document.querySelector(".replaybutton").innerHTML="\ud83d\udd0a";
-		}
-		catch{
-			document.querySelector(".replay-button").innerHTML="\ud83d\udd0a";
-		}
-	}
-	catch {}
-</script>
-
-<!-- JS Debug Div for Console.Log -->
-<!--
-<div id="debug"/>
-<script type="text/javascript" src="scripts/_console.js"></script>
--->
